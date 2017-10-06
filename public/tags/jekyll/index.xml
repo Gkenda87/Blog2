@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jekyll on Gabby Kendall&#39;s Data Science Blog</title>
+    <link>/tags/jekyll/</link>
+    <description>Recent content in Jekyll on Gabby Kendall&#39;s Data Science Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
+    <lastBuildDate>Sat, 10 Oct 2015 13:07:31 +0200</lastBuildDate>
+    
+	<atom:link href="/tags/jekyll/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title> </title>
+      <link>/post/migrate-from-jekyll/</link>
+      <pubDate>Sat, 10 Oct 2015 13:07:31 +0200</pubDate>
+      
+      <guid>/post/migrate-from-jekyll/</guid>
+      <description>&lt;h1 id=&#34;welcome-to-introduction-of-data-science&#34;&gt;welcome to Introduction of Data Science&lt;/h1&gt;
+
+&lt;p&gt;HI!&lt;/p&gt;
+
+&lt;p&gt;Welcome to my blog about the intro to data science class directed by Dr. Redmond at Mercyhurst University. We will be using R studio, SQL, and ggplot to identify visualization.  If you do not know about any of these tools, feel free to look at my website with examples.&lt;a href=&#34;https://gkenda87.github.io/website/&#34;&gt;https://gkenda87.github.io/website/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Also, if you have any questions, feel free to contact me with my email or social media posted in the sidebar. Thank you for your time and visiting my data science blog, and hope you have a great day!!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
