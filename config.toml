@@ -1,4 +1,4 @@
-baseurl = "https://gabbysblog.netlify.com/"
+baseurl = "https://gabbysdsblog.netlify.com/"
 languageCode = "en-us"
 title = "Gabby Kendall's Data Science Blog"
 # Define how many pages appear per site
