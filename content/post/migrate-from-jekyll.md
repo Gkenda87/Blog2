@@ -1,10 +1,10 @@
 +++
-title = " "
+title = "Welcome to Introductio to Data Science "
 date = "2015-10-10T13:07:31+02:00"
 tags = ["datascience", "sql"]
 +++
 
-# welcome to Introduction of Data Science at Mercyhurst University
+
 HI!
 
 Welcome to my blog about the intro to data science class directed by Dr. Redmond at Mercyhurst University. We will be using R studio, SQL, and ggplot to identify visualization.  If you do not know about any of these tools, feel free to look at my website with examples.https://gkenda87.github.io/website/ 
@@ -12,31 +12,6 @@ Welcome to my blog about the intro to data science class directed by Dr. Redmond
 Also, if you have any questions, feel free to contact me with my email or social media posted in the sidebar. Thank you for your time and visiting my data science blog, and hope you have a great day!! 
 
 
-# Scatter Plots!
-With data visualization, we can make scatter plots. So, we are going to start by taking homeruns and strikeouts from the Lahman database of baseball statistics and make a great scatterplot! Let the fun begin.  
-
-First we need to install the packages and need to load our libraries. This shows what sets of data we need. 
-
-library(Lahman)
-
-library(sqldf)
-
-library(ggplot2)
-
-Next, we are going to identify what we are looking for. As in this case, we are lookig for career homeruns and strikeouts from players who had more than 400 homeruns.
-
-query<-"SELECT playerID,sum(HR),sum(SO)
-FROM Batting
-GROUP BY playerID
-HAVING sum(HR)>400"
-sqldf(query)
-
-Now that we have the information, we need to save it as a result.
-
-query<-"SELECT playerID,sum(HR) AS CareerHR,sum(SO) AS Career SO
-FROM Batting
-HAVING sum(HR)>400"
-result<-sqldf(query)
 
 
 
