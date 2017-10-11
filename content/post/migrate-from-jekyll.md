@@ -1,5 +1,5 @@
 +++
-title = "Welcome to Introductio to Data Science "
+title = "Welcome to Introduction to Data Science "
 date = "2015-10-10T13:07:31+02:00"
 tags = ["datascience", "sql"]
 +++

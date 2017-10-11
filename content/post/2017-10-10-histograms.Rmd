@@ -1,0 +1,39 @@
+---
+title: 'Histograms '
+author: ''
+date: '2017-10-10'
+slug: histograms
+categories: []
+tags: [Histograms, data visualization]
+---
+
+Now we are moving onto histograms! 
+
+Let's look at the weights of MLB players throught the Master table in the Lahman database.
+
+```{r}
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+```
+
+Below is the sqldf inquiry:
+
+```{r}
+query<-"SELECT weight FROM Master"
+result<-sqldf(query)
+```
+
+The next step is like the other visualizations, putting it in the ggplot script. 
+
+```{r}
+ggplot()+
+  geom_histogram(data=result,aes(x=weight),color="blue",fill="white",bins=60)+
+  ggtitle("Distribution of Baseball Player Bodyweight")+
+  xlab("Weight of player")+
+  ylab("Number of players")
+  
+```
+
+See the histogram was not too bad! The bins we see on this visualization represent the numbers of bars shown.  
+
