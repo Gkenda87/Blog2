@@ -1,0 +1,37 @@
+---
+title: 'Time Series '
+author: ''
+date: '2017-10-10'
+slug: time-series
+categories: []
+tags: []
+---
+
+Hello, this time we are going to look at data visualization with using time series. To start we bring down the libraries again.
+
+```{r}
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+```
+
+Now, we will look at Babe Ruth's homeruns over his 22 seasons.Below is the sql inquiry.  
+
+```{r}
+query<-"SELECT yearID,HR FROM Batting
+WHERE playerID='ruthba01'"
+result<-sqldf(query)
+```
+
+Now, we will put this data into a time series visualization. With the time series plot, it will allow us to connect the data points to make a line showing a great visualization!
+
+```{r}
+ggplot()+
+  geom_point(data=result,aes(x=yearID,y=HR),size=1/2)+
+  geom_line(data=result,aes(x=yearID,y=HR))+
+  ggtitle("Babe Ruth's Homeruns by Year")+
+  xlab("Year")+
+  ylab("Number of Homeruns")
+```
+
+Now you have learned another visualization of time series!
