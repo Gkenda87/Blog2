@@ -1,37 +1,48 @@
 ---
-title: "Hello R Markdown"
+title: "Scatter plots"
 author: "Frida Gomam"
 date: 2015-07-23T21:13:14-05:00
-categories: ["R"]
-tags: ["R Markdown", "plot", "regression"]
+categories: [""]
+tags: ["scatter plots","data visualization"]
 ---
+The scatter plot is the first data visualization that we will do. So, let's take the homeruns and strikeouts from the Lahman database and make a scatterplot. 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(collapse = TRUE)
+First, we will load our libraries. This will tell the computer what sets of data we are going to identify. 
+```{r}
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+
 ```
 
-# R Markdown
+Onto the next step! We are going to look at the career homeruns and strikeouts from players who had more than 400 homeruns. 
+```{r}
+query<-"SELECT playerID,sum(HR),sum(SO)
+FROM Batting
+GROUP BY playerID
+HAVING sum(HR)>400"
+sqldf(query)
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-fit <- lm(dist ~ speed, data = cars)
-fit
 ```
 
-# Including Plots
+Now that we have the information, we will save it as a result. 
 
-You can also embed plots. See Figure \@ref(fig:pie) for example:
-
-```{r pie, fig.cap='A fancy pie chart.', tidy=FALSE}
-par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c('Sky', 'Sunny side of pyramid', 'Shady side of pyramid'),
-  col = c('#0292D8', '#F7EA39', '#C4B632'),
-  init.angle = -50, border = NA
-)
+```{r}
+query<-"SELECT playerID,sum(HR) AS CareerHR,sum(SO) As CareerSO 
+FROM Batting
+HAVING sum(HR)>400"
+result<-sqldf(query)
 ```
+
+Now the data will turn into points by associating the homeruns with the y-axis and strikeouts with the x-axis. Also, we will add the graph title and the axis labels. 
+
+```{r}
+ggplot()+  
+  geom_point(data=result,aes(x=CareerSO,y=CareerHR),size=3)+
+  ggtitle("Career Strikeouts and Homeruns")+
+  xlab("Career Strikeouts")+
+  ylab("Career Homeruns")
+```
+
+YAY!! Now you know how to make a scatter plot! 
+
