@@ -7,69 +7,54 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
-    <lastBuildDate>Sat, 10 Oct 2015 13:07:31 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 18 Oct 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title> </title>
-      <link>/post/migrate-from-jekyll/</link>
-      <pubDate>Sat, 10 Oct 2015 13:07:31 +0200</pubDate>
+      <title>Bar Plot</title>
+      <link>/post/bar-plot/</link>
+      <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/migrate-from-jekyll/</guid>
-      <description>welcome to Introduction of Data Science at Mercyhurst University HI!
-Welcome to my blog about the intro to data science class directed by Dr. Redmond at Mercyhurst University. We will be using R studio, SQL, and ggplot to identify visualization. If you do not know about any of these tools, feel free to look at my website with examples.https://gkenda87.github.io/website/
-Also, if you have any questions, feel free to contact me with my email or social media posted in the sidebar.</description>
+      <guid>/post/bar-plot/</guid>
+      <description>This is our last data visualization that we will be doing! We are going to work on the bar plots.
+library(Lahman)library(sqldf)library(ggplot2)library(devtools)With a bar plot, we will look at the team homerun totals for all the MLB teams in 1980.
+query&amp;lt;-&amp;quot;SELECT name,HR FROM TeamsWHERE yearID=1980ORDER BY HR&amp;quot;result&amp;lt;-sqldf(query)result$name&amp;lt;-factor(result$name,levels=result$name)The last time listed above is saving this information as a factor. This will give assistance of how the order of the results appear in the order we stated.</description>
     </item>
     
     <item>
-      <title>Go is for lovers</title>
-      <link>/post/go-is-for-lovers/</link>
-      <pubDate>Thu, 17 Sep 2015 13:47:08 +0200</pubDate>
+      <title>Scatterplot</title>
+      <link>/post/scatterplot/</link>
+      <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/go-is-for-lovers/</guid>
-      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
-This document is a brief primer on using go templates.</description>
+      <guid>/post/scatterplot/</guid>
+      <description>The scatter plot is the first data visualization that we will do. So, let’s take the homeruns and strikeouts from the Lahman database and make a scatterplot.
+First, we will load our libraries. This will tell the computer what sets of data we are going to identify.
+library(Lahman)library(sqldf)library(ggplot2)library(devtools)Onto the next step! We are going to look at the career homeruns and strikeouts from players who had more than 400 homeruns.</description>
     </item>
     
     <item>
-      <title>Hugo is for lovers</title>
-      <link>/post/hugo-is-for-lovers/</link>
-      <pubDate>Mon, 03 Aug 2015 13:39:46 +0200</pubDate>
+      <title>Histograms </title>
+      <link>/post/histograms/</link>
+      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/hugo-is-for-lovers/</guid>
-      <description>&lt;h2 id=&#34;step-1-install-hugo&#34;&gt;Step 1. Install Hugo&lt;/h2&gt;
-
-&lt;p&gt;Goto &lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;hugo releases&lt;/a&gt; and download the
-appropriate version for your os and architecture.&lt;/p&gt;
-
-&lt;p&gt;Save it somewhere specific as we will be using it in the next step.&lt;/p&gt;
-
-&lt;p&gt;More complete instructions are available at &lt;a href=&#34;/overview/installing/&#34;&gt;installing hugo&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <guid>/post/histograms/</guid>
+      <description>Now we are moving onto histograms!
+Let’s look at the weights of MLB players throught the Master table in the Lahman database.
+library(Lahman)library(sqldf)library(ggplot2)Below is the sqldf inquiry:
+query&amp;lt;-&amp;quot;SELECT weight FROM Master&amp;quot;result&amp;lt;-sqldf(query)#The next step is like the other visualizations, putting it in the ggplot script. ggplot()+geom_histogram(data=result,aes(x=weight),color=&amp;quot;blue&amp;quot;,fill=&amp;quot;white&amp;quot;,bins=60)+ggtitle(&amp;quot;Distribution of Baseball Player Bodyweight&amp;quot;)+xlab(&amp;quot;Weight of player&amp;quot;)+ylab(&amp;quot;Number of players&amp;quot;)See the histogram was not too bad! The bins we see on this visualization represent the numbers of bars shown.</description>
     </item>
     
     <item>
-      <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <title>Time Series </title>
+      <link>/post/time-series/</link>
+      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
-    </item>
-    
-    <item>
-      <title>Creating a new theme</title>
-      <link>/post/creating-a-new-theme/</link>
-      <pubDate>Wed, 24 Jun 2015 13:50:46 +0200</pubDate>
-      
-      <guid>/post/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+      <guid>/post/time-series/</guid>
+      <description>Hello, this time we are going to look at data visualization with using time series. To start we bring down the libraries again.
+library(Lahman)library(sqldf)library(ggplot2)library(devtools)Now, we will look at Babe Ruth’s homeruns over his 22 seasons.Below is the sql inquiry.
+query&amp;lt;-&amp;quot;SELECT yearID,HR FROM BattingWHERE playerID=&amp;#39;ruthba01&amp;#39;&amp;quot;result&amp;lt;-sqldf(query)#Now, we will put this data into a time series visualization. With the time series plot, it will allow us to connect the data points to make a line showing a great visualization!</description>
     </item>
     
   </channel>

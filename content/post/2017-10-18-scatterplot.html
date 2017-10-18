@@ -1,0 +1,36 @@
+---
+title: Scatterplot
+author: Gabby
+date: '2017-10-18'
+slug: scatterplot
+categories: []
+tags: []
+---
+
+
+
+<p>The scatter plot is the first data visualization that we will do. So, let’s take the homeruns and strikeouts from the Lahman database and make a scatterplot.</p>
+<p>First, we will load our libraries. This will tell the computer what sets of data we are going to identify.</p>
+<pre class="r"><code>library(Lahman)
+library(sqldf)
+library(ggplot2)
+library(devtools)</code></pre>
+<p>Onto the next step! We are going to look at the career homeruns and strikeouts from players who had more than 400 homeruns.</p>
+<pre class="r"><code>#query&lt;-&quot;SELECT playerID,sum(HR),sum(SO)
+#FROM Batting
+#GROUP BY playerID
+#HAVING sum(HR)&gt;400&quot;
+#sqldf(query)</code></pre>
+<p>Now that we have the information, we will save it as a result.</p>
+<pre class="r"><code>query&lt;-&quot;SELECT playerID,sum(HR) AS Career_HR,sum(SO) As Career_SO 
+FROM Batting GROUP BY playerID
+HAVING sum(HR)&gt;=400&quot;
+result&lt;-sqldf(query)
+#Now the data will turn into points by associating the homeruns with the y-axis and strikeouts with the x-axis. Also, we will add the graph title and the axis labels. 
+ggplot()+  
+  geom_point(data=result,aes(x=Career_SO,y=Career_HR),size=3)+
+  ggtitle(&quot;Career Strikeouts and Homeruns&quot;)+
+  xlab(&quot;Career Strikeouts&quot;)+
+  ylab(&quot;Career Homeruns&quot;)</code></pre>
+<p><img src="/post/2017-10-18-scatterplot_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>YAY!! Now you know how to make a scatter plot!</p>

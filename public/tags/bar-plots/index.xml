@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bar Plots on Gabby Kendall&#39;s Data Science Blog</title>
+    <link>/tags/bar-plots/</link>
+    <description>Recent content in Bar Plots on Gabby Kendall&#39;s Data Science Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
+    <lastBuildDate>Tue, 10 Oct 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/bar-plots/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bar plots </title>
+      <link>/post/bar-plots/</link>
+      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/bar-plots/</guid>
+      <description>This is our last data visualization that we will be doing! We are going to work on the bar plots.
+library(Lahman)## Warning: package &amp;#39;Lahman&amp;#39; was built under R version 3.4.2library(sqldf)## Warning: package &amp;#39;sqldf&amp;#39; was built under R version 3.4.2## Loading required package: gsubfn## Loading required package: proto## Loading required package: RSQLitelibrary(ggplot2)## Warning: package &amp;#39;ggplot2&amp;#39; was built under R version 3.4.2With a bar plot, we will look at the team homerun totals for all the MLB teams in 1980.</description>
+    </item>
+    
+  </channel>
+</rss>

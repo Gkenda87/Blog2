@@ -1,0 +1,32 @@
+---
+title: Bar Plot
+author: Gabby
+date: '2017-10-18'
+slug: bar-plot
+categories: []
+tags: []
+---
+
+
+
+<p>This is our last data visualization that we will be doing! We are going to work on the bar plots.</p>
+<pre class="r"><code>library(Lahman)
+library(sqldf)
+library(ggplot2)
+library(devtools)</code></pre>
+<p>With a bar plot, we will look at the team homerun totals for all the MLB teams in 1980.</p>
+<pre class="r"><code>query&lt;-&quot;SELECT name,HR FROM Teams
+WHERE yearID=1980
+ORDER BY HR&quot;
+result&lt;-sqldf(query)
+
+result$name&lt;-factor(result$name,levels=result$name)</code></pre>
+<p>The last time listed above is saving this information as a factor. This will give assistance of how the order of the results appear in the order we stated.</p>
+<pre class="r"><code>ggplot()+
+  geom_bar(data=result,aes(x=name,y=HR),stat=&#39;identity&#39;)+
+  coord_flip()+
+  ggtitle(&quot;1980 Team Homerun Totals&quot;)+
+  xlab(&quot;Team Name&quot;)+
+  ylab(&quot;Homeruns&quot;)</code></pre>
+<p><img src="/post/2017-10-18-bar-plot_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>And that is it!! You learned all the data visualizations throught the ggplot2.</p>

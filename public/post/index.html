@@ -7,7 +7,7 @@
         <meta name="author">
         <meta name="description" content="The awesome blog of John Doe.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="generator" content="Hugo 0.29" />
+        <meta name="generator" content="Hugo 0.30" />
         <link href="/post/index.xml" rel="alternate" type="application/rss+xml" title="Gabby Kendall&#39;s Data Science Blog" />
         <link href="/post/index.xml" rel="feed" type="application/rss+xml" title="Gabby Kendall&#39;s Data Science Blog" />
         <link href='//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -46,119 +46,110 @@
         
             <article class="post">
     
-<h1><a href="/post/migrate-from-jekyll/" title=" "> </a></h1>
+<h1><a href="/post/bar-plot/" title="Bar Plot">Bar Plot</a></h1>
 
-<footer class="post-info">Posted on <span class="post-meta"><time datetime="2015.10.10">2015.10.10</time>
+<footer class="post-info">Posted on <span class="post-meta"><time datetime="2017.10.18">2017.10.18</time>
+
+    
+
+</span>
+</footer>
+
+    <p>This is our last data visualization that we will be doing! We are going to work on the bar plots.
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+library(devtools)
+With a bar plot, we will look at the team homerun totals for all the MLB teams in 1980.
+query&lt;-&quot;SELECT name,HR FROM Teams
+WHERE yearID=1980
+ORDER BY HR&quot;
+result&lt;-sqldf(query)
+result$name&lt;-factor(result$name,levels=result$name)
+The last time listed above is saving this information as a factor. This will give assistance of how the order of the results appear in the order we stated.&hellip;</p>
+    <a href="/post/bar-plot/" title="Bar Plot">Read more &raquo;</a>
+</article>
+
+        
+            <article class="post">
+    
+<h1><a href="/post/scatterplot/" title="Scatterplot">Scatterplot</a></h1>
+
+<footer class="post-info">Posted on <span class="post-meta"><time datetime="2017.10.18">2017.10.18</time>
+
+    
+
+</span>
+</footer>
+
+    <p>The scatter plot is the first data visualization that we will do. So, let’s take the homeruns and strikeouts from the Lahman database and make a scatterplot.
+First, we will load our libraries. This will tell the computer what sets of data we are going to identify.
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+library(devtools)
+Onto the next step! We are going to look at the career homeruns and strikeouts from players who had more than 400 homeruns.&hellip;</p>
+    <a href="/post/scatterplot/" title="Scatterplot">Read more &raquo;</a>
+</article>
+
+        
+            <article class="post">
+    
+<h1><a href="/post/histograms/" title="Histograms ">Histograms </a></h1>
+
+<footer class="post-info">Posted on <span class="post-meta"><time datetime="2017.10.10">2017.10.10</time>
 
     &middot; Tagged in
         
-        <a href="/tags/datascience">datascience</a>, 
+        <a href="/tags/histograms">histograms</a>, 
         
-        <a href="/tags/sql">sql</a>
+        <a href="/tags/data-visualization">data visualization</a>
         
     
 
 </span>
 </footer>
 
-    <p>welcome to Introduction of Data Science at Mercyhurst University HI!
-Welcome to my blog about the intro to data science class directed by Dr. Redmond at Mercyhurst University. We will be using R studio, SQL, and ggplot to identify visualization. If you do not know about any of these tools, feel free to look at my website with examples.<a href="https://gkenda87.github.io/website/">https://gkenda87.github.io/website/</a>
-Also, if you have any questions, feel free to contact me with my email or social media posted in the sidebar.&hellip;</p>
-    <a href="/post/migrate-from-jekyll/" title=" ">Read more &raquo;</a>
+    <p>Now we are moving onto histograms!
+Let’s look at the weights of MLB players throught the Master table in the Lahman database.
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+Below is the sqldf inquiry:
+query&lt;-&quot;SELECT weight FROM Master&quot;
+result&lt;-sqldf(query)
+#The next step is like the other visualizations, putting it in the ggplot script. ggplot()+
+geom_histogram(data=result,aes(x=weight),color=&quot;blue&quot;,fill=&quot;white&quot;,bins=60)+
+ggtitle(&quot;Distribution of Baseball Player Bodyweight&quot;)+
+xlab(&quot;Weight of player&quot;)+
+ylab(&quot;Number of players&quot;)
+See the histogram was not too bad! The bins we see on this visualization represent the numbers of bars shown.&hellip;</p>
+    <a href="/post/histograms/" title="Histograms ">Read more &raquo;</a>
 </article>
 
         
             <article class="post">
     
-<h1><a href="/post/go-is-for-lovers/" title="Go is for lovers">Go is for lovers</a></h1>
+<h1><a href="/post/time-series/" title="Time Series ">Time Series </a></h1>
 
-<footer class="post-info">Posted on <span class="post-meta"><time datetime="2015.09.17">2015.09.17</time>
-
-    
-
-</span>
-</footer>
-
-    <p>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
-This document is a brief primer on using go templates.&hellip;</p>
-    <a href="/post/go-is-for-lovers/" title="Go is for lovers">Read more &raquo;</a>
-</article>
-
-        
-            <article class="post">
-    
-<h1><a href="/post/hugo-is-for-lovers/" title="Hugo is for lovers">Hugo is for lovers</a></h1>
-
-<footer class="post-info">Posted on <span class="post-meta"><time datetime="2015.08.03">2015.08.03</time>
-
-    &middot; Tagged in
-        
-        <a href="/tags/hugo">hugo</a>
-        
-    
-
-</span>
-</footer>
-
-    <p><h2 id="step-1-install-hugo">Step 1. Install Hugo</h2>
-
-<p>Goto <a href="https://github.com/spf13/hugo/releases">hugo releases</a> and download the
-appropriate version for your os and architecture.</p>
-
-<p>Save it somewhere specific as we will be using it in the next step.</p>
-
-<p>More complete instructions are available at <a href="/overview/installing/">installing hugo</a></p>
-
-<p></p>
-&hellip;</p>
-    <a href="/post/hugo-is-for-lovers/" title="Hugo is for lovers">Read more &raquo;</a>
-</article>
-
-        
-            <article class="post">
-    
-<h1><a href="/post/2015-07-23-r-rmarkdown/" title="Hello R Markdown">Hello R Markdown</a></h1>
-
-<footer class="post-info">Posted on <span class="post-meta"><time datetime="2015.07.23">2015.07.23</time>
-
-    &middot; Tagged in
-        
-        <a href="/tags/r-markdown">r markdown</a>, 
-        
-        <a href="/tags/plot">plot</a>, 
-        
-        <a href="/tags/regression">regression</a>
-        
-    
-
-</span>
-</footer>
-
-    <p>R Markdown
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com">http://rmarkdown.rstudio.com</a>.
-You can embed an R code chunk like this:
-summary(cars)</p>
-
-<h2 id="speed-dist-min-4-0-min-2-00-1st-qu-12-0-1st-qu-26-00-median-15-0-median-36-00-mean-15-4-mean-42-98-3rd-qu">speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</h2>
-&hellip;</p>
-    <a href="/post/2015-07-23-r-rmarkdown/" title="Hello R Markdown">Read more &raquo;</a>
-</article>
-
-        
-            <article class="post">
-    
-<h1><a href="/post/creating-a-new-theme/" title="Creating a new theme">Creating a new theme</a></h1>
-
-<footer class="post-info">Posted on <span class="post-meta"><time datetime="2015.06.24">2015.06.24</time>
+<footer class="post-info">Posted on <span class="post-meta"><time datetime="2017.10.10">2017.10.10</time>
 
     
 
 </span>
 </footer>
 
-    <p>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&rsquo;t cover using CSS to style your theme.
-We&rsquo;ll start with creating a new site with a very basic template.&hellip;</p>
-    <a href="/post/creating-a-new-theme/" title="Creating a new theme">Read more &raquo;</a>
+    <p>Hello, this time we are going to look at data visualization with using time series. To start we bring down the libraries again.
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+library(devtools)
+Now, we will look at Babe Ruth’s homeruns over his 22 seasons.Below is the sql inquiry.
+query&lt;-&quot;SELECT yearID,HR FROM Batting
+WHERE playerID=&#39;ruthba01&#39;&quot;
+result&lt;-sqldf(query)
+#Now, we will put this data into a time series visualization. With the time series plot, it will allow us to connect the data points to make a line showing a great visualization!&hellip;</p>
+    <a href="/post/time-series/" title="Time Series ">Read more &raquo;</a>
 </article>
 
         
@@ -183,26 +174,10 @@ We&rsquo;ll start with creating a new site with a very basic template.&hellip;</
     
 
 
-<li><a href="//facebook.com/Gabby%20Kendall" class="icon-facebook-squared" target="_blank" title="Facebook"></a></li>
-
-
-
-
-
-
-
-
-
-<li><a href="//instagram.com/gabbyk_14" class="icon-instagram" target="_blank" title="Instagram"></a></li>
-
-
-
 <li><a href="//github.com/gkenda87" class="icon-github" target="_blank" title="Github"></a></li>
 
 
 
-
-<li><a href="/post/index.xml" class="icon-rss" target="_blank" title="RSS"></a></li>
 
   </ul>
   <br><br>

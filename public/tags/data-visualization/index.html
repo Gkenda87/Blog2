@@ -1,0 +1,131 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Data Visualization &middot; Gabby Kendall&#39;s Data Science Blog</title>
+        <meta name="author">
+        <meta name="description" content="The awesome blog of John Doe.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="Hugo 0.30" />
+        <link href="/post/index.xml" rel="alternate" type="application/rss+xml" title="Gabby Kendall&#39;s Data Science Blog" />
+        <link href="/post/index.xml" rel="feed" type="application/rss+xml" title="Gabby Kendall&#39;s Data Science Blog" />
+        <link href='//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="icon" href="/favicon.ico">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="stylesheet" href="/css/highlightjs/monokai.css">
+        <script src="/js/vendor/modernizr-2.8.0.min.js"></script>
+        
+        <style>
+        .site-header h2 .logo {
+        background: url(/img/fall.jpg) no-repeat 0 0;
+        }
+        @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+          .site-header h2 .logo {
+            background-image: url(/img/fall.jpg);
+        }}
+       .site-header {
+         background: #2a373d url(/img/fall.jpg) no-repeat center center;
+         z-index: -1;
+        }
+        </style>
+    </head>
+    <body>
+        
+        <header class="site-header">
+          <div class="transparent-layer">
+              <h2>Gabby Kendall&#39;s Data Science Blog</h2>
+          </div>
+        </header>
+
+<div class="container clearfix">
+    <main role="main" class="content">
+        <a class="btn home" href="/" title="Back to home">&laquo; Back to home</a>
+        
+        
+            <article class="post">
+    
+<h1><a href="/post/histograms/" title="Histograms ">Histograms </a></h1>
+
+<footer class="post-info">Posted on <span class="post-meta"><time datetime="2017.10.10">2017.10.10</time>
+
+    &middot; Tagged in
+        
+        <a href="/tags/histograms">histograms</a>, 
+        
+        <a href="/tags/data-visualization">data visualization</a>
+        
+    
+
+</span>
+</footer>
+
+    <p>Now we are moving onto histograms!
+Let’s look at the weights of MLB players throught the Master table in the Lahman database.
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+Below is the sqldf inquiry:
+query&lt;-&quot;SELECT weight FROM Master&quot;
+result&lt;-sqldf(query)
+#The next step is like the other visualizations, putting it in the ggplot script. ggplot()+
+geom_histogram(data=result,aes(x=weight),color=&quot;blue&quot;,fill=&quot;white&quot;,bins=60)+
+ggtitle(&quot;Distribution of Baseball Player Bodyweight&quot;)+
+xlab(&quot;Weight of player&quot;)+
+ylab(&quot;Number of players&quot;)
+See the histogram was not too bad! The bins we see on this visualization represent the numbers of bars shown.&hellip;</p>
+    <a href="/post/histograms/" title="Histograms ">Read more &raquo;</a>
+</article>
+
+        
+        <div class="pagination">
+<nav>
+
+	<p class="counter">Page 1 of 1</p>
+
+
+</nav>
+</div>
+
+    </main>
+
+    <aside class="author">
+  <img class="profile-image" src="/img/profile-image.png" alt="Gabby Kendall" />
+  <p class="name">by 
+  <strong>Gabby Kendall</strong></p>
+  <p class="address">Mercyhurst University</p>
+  <p class="link"></p>
+  <ul class="social">
+    
+
+
+<li><a href="//github.com/gkenda87" class="icon-github" target="_blank" title="Github"></a></li>
+
+
+
+
+  </ul>
+  <br><br>
+</aside>
+
+</div>
+<footer class="main-footer">
+  <div class="container clearfix">
+        
+        <p>&copy; 2017 &middot; Powered by <a href="http://gohugo.io">Hugo</a>.</p>
+  </div>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>window.jQuery || document.write('<script src="\/js\/vendor\/jquery-1.11.0.min.js"><\/script>')</script>
+<script src="/js/plugins.js"></script>
+
+
+
+
+</body>
+</html>
+

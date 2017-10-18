@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Histograms on Gabby Kendall&#39;s Data Science Blog</title>
+    <link>/tags/histograms/</link>
+    <description>Recent content in Histograms on Gabby Kendall&#39;s Data Science Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
+    <lastBuildDate>Tue, 10 Oct 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/histograms/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Histograms </title>
+      <link>/post/histograms/</link>
+      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/histograms/</guid>
+      <description>Now we are moving onto histograms!
+Let’s look at the weights of MLB players throught the Master table in the Lahman database.
+library(Lahman)library(sqldf)library(ggplot2)Below is the sqldf inquiry:
+query&amp;lt;-&amp;quot;SELECT weight FROM Master&amp;quot;result&amp;lt;-sqldf(query)#The next step is like the other visualizations, putting it in the ggplot script. ggplot()+geom_histogram(data=result,aes(x=weight),color=&amp;quot;blue&amp;quot;,fill=&amp;quot;white&amp;quot;,bins=60)+ggtitle(&amp;quot;Distribution of Baseball Player Bodyweight&amp;quot;)+xlab(&amp;quot;Weight of player&amp;quot;)+ylab(&amp;quot;Number of players&amp;quot;)See the histogram was not too bad! The bins we see on this visualization represent the numbers of bars shown.</description>
+    </item>
+    
+  </channel>
+</rss>
