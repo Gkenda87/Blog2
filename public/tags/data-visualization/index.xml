@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Data Visualization on Gabby Kendall&#39;s Data Science Blog</title>
-    <link>/tags/data-visualization/</link>
+    <link>https://gabbysdsblog.netlify.com/tags/data-visualization/</link>
     <description>Recent content in Data Visualization on Gabby Kendall&#39;s Data Science Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
     <lastBuildDate>Tue, 10 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/data-visualization/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gabbysdsblog.netlify.com/tags/data-visualization/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Histograms </title>
-      <link>/post/histograms/</link>
+      <link>https://gabbysdsblog.netlify.com/post/histograms/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/histograms/</guid>
+      <guid>https://gabbysdsblog.netlify.com/post/histograms/</guid>
       <description>Now we are moving onto histograms!
 Let’s look at the weights of MLB players throught the Master table in the Lahman database.
 library(Lahman)library(sqldf)library(ggplot2)Below is the sqldf inquiry:

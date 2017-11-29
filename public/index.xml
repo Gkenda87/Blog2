@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gabby Kendall&#39;s Data Science Blog</title>
-    <link>/</link>
+    <link>https://gabbysdsblog.netlify.com/</link>
     <description>Recent content on Gabby Kendall&#39;s Data Science Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
     <lastBuildDate>Wed, 18 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gabbysdsblog.netlify.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bar Plot</title>
-      <link>/post/bar-plot/</link>
+      <link>https://gabbysdsblog.netlify.com/post/bar-plot/</link>
       <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/bar-plot/</guid>
+      <guid>https://gabbysdsblog.netlify.com/post/bar-plot/</guid>
       <description>This is our last data visualization that we will be doing! We are going to work on the bar plots.
 library(Lahman)library(sqldf)library(ggplot2)library(devtools)With a bar plot, we will look at the team homerun totals for all the MLB teams in 1980.
 query&amp;lt;-&amp;quot;SELECT name,HR FROM TeamsWHERE yearID=1980ORDER BY HR&amp;quot;result&amp;lt;-sqldf(query)result$name&amp;lt;-factor(result$name,levels=result$name)The last time listed above is saving this information as a factor. This will give assistance of how the order of the results appear in the order we stated.</description>
@@ -25,10 +25,10 @@ query&amp;lt;-&amp;quot;SELECT name,HR FROM TeamsWHERE yearID=1980ORDER BY HR&
     
     <item>
       <title>Scatterplot</title>
-      <link>/post/scatterplot/</link>
+      <link>https://gabbysdsblog.netlify.com/post/scatterplot/</link>
       <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/scatterplot/</guid>
+      <guid>https://gabbysdsblog.netlify.com/post/scatterplot/</guid>
       <description>The scatter plot is the first data visualization that we will do. So, let’s take the homeruns and strikeouts from the Lahman database and make a scatterplot.
 First, we will load our libraries. This will tell the computer what sets of data we are going to identify.
 library(Lahman)library(sqldf)library(ggplot2)library(devtools)Onto the next step! We are going to look at the career homeruns and strikeouts from players who had more than 400 homeruns.</description>
@@ -36,10 +36,10 @@ library(Lahman)library(sqldf)library(ggplot2)library(devtools)Onto the next 
     
     <item>
       <title>Histograms </title>
-      <link>/post/histograms/</link>
+      <link>https://gabbysdsblog.netlify.com/post/histograms/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/histograms/</guid>
+      <guid>https://gabbysdsblog.netlify.com/post/histograms/</guid>
       <description>Now we are moving onto histograms!
 Let’s look at the weights of MLB players throught the Master table in the Lahman database.
 library(Lahman)library(sqldf)library(ggplot2)Below is the sqldf inquiry:
@@ -48,10 +48,10 @@ query&amp;lt;-&amp;quot;SELECT weight FROM Master&amp;quot;result&amp;lt;-sqldf
     
     <item>
       <title>Time Series </title>
-      <link>/post/time-series/</link>
+      <link>https://gabbysdsblog.netlify.com/post/time-series/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/time-series/</guid>
+      <guid>https://gabbysdsblog.netlify.com/post/time-series/</guid>
       <description>Hello, this time we are going to look at data visualization with using time series. To start we bring down the libraries again.
 library(Lahman)library(sqldf)library(ggplot2)library(devtools)Now, we will look at Babe Ruth’s homeruns over his 22 seasons.Below is the sql inquiry.
 query&amp;lt;-&amp;quot;SELECT yearID,HR FROM BattingWHERE playerID=&amp;#39;ruthba01&amp;#39;&amp;quot;result&amp;lt;-sqldf(query)#Now, we will put this data into a time series visualization. With the time series plot, it will allow us to connect the data points to make a line showing a great visualization!</description>

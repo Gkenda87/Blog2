@@ -17,8 +17,8 @@ theme = "hugo-minimalist-theme"
     site_description = "The awesome blog of John Doe."
     location = "Mercyhurst University"
     # Link custom assets relative to /static
-    avatar = "img/profile-image.png"
-    header_background = "img/fall.jpg"
+    avatar = "img/profilepicture.jpg"
+    header_background = "img/mercyhurst.jpg"
     header_title = "Gabby Kendall's Data Science Blog"
     copyright = "Powered by [Hugo](http://gohugo.io)."
     custom_css = []

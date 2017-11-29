@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Gabby Kendall&#39;s Data Science Blog</title>
-    <link>/tags/</link>
+    <link>https://gabbysdsblog.netlify.com/tags/</link>
     <description>Recent content in Tags on Gabby Kendall&#39;s Data Science Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
     <lastBuildDate>Tue, 10 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gabbysdsblog.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Data Visualization</title>
-      <link>/tags/data-visualization/</link>
+      <link>https://gabbysdsblog.netlify.com/tags/data-visualization/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/data-visualization/</guid>
+      <guid>https://gabbysdsblog.netlify.com/tags/data-visualization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Histograms</title>
-      <link>/tags/histograms/</link>
+      <link>https://gabbysdsblog.netlify.com/tags/histograms/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/histograms/</guid>
+      <guid>https://gabbysdsblog.netlify.com/tags/histograms/</guid>
       <description></description>
     </item>
     
